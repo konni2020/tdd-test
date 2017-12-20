@@ -13,7 +13,7 @@ class HomePageTest(TestCase):
 		self.assertTemplateUsed(response, 'home.html')
 
 
-class IListAndItemModelTest(TestCase):
+class ListAndItemModelTest(TestCase):
 
 	def test_saving_and_retrieving_items(self):
 		list_ = List()
