@@ -9,7 +9,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import WebDriverException
 
 
-MAX_WAIT = 10
+MAX_WAIT = 3
 
 
 class FunctionalTest(StaticLiveServerTestCase):
@@ -35,3 +35,13 @@ class FunctionalTest(StaticLiveServerTestCase):
 				if time.time() - start_time > MAX_WAIT:
 					raise e 
 				time.sleep(0.5)
+
+	def wait_for(self, fn):
+		start_time = time.time()
+		while True:
+			try:
+				return fn()
+			except (AssertionError, WebDriverException) as e:
+				if time.time() - start_time > MAX_WAIT:
+					raise e 
+				time.sleep(0.5)	
