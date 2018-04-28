@@ -10,7 +10,7 @@ class ItemForm(forms.ModelForm):
 
 	class Meta:
 		model = Item
-		fields = ('text', 'list')
+		fields = ('text',)
 		widgets = {
 			'text': forms.fields.TextInput(attrs={
 				'placeholder': 'Enter a to-do item',
