@@ -130,3 +130,10 @@ STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
 
 
 
+EMAIL_HOST = 'in-v3.mailjet.com'
+EMAIL_HOST_USER = '92d191fc6e723c877cf01c1aa1d44701'
+
+from . import secret
+EMAIL_HOST_PASSWORD = secret.EMAIL_PASSWORD
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
