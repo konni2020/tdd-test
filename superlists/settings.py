@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=jgp05hx7&mb!$md)newa7wfbr&tqpx@4&#3cupw$p^ri@s+lu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['test.schalotte.gq']
 
 
 # Application definition
